@@ -17,6 +17,7 @@ from kfp import dsl
 @dsl.component
 def flip_coin() -> str:
     import random
+    random.seed(42)
     return 'heads' if random.randint(0, 1) == 0 else 'tails'
 
 

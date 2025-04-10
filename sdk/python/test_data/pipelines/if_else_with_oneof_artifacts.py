@@ -20,6 +20,7 @@ from kfp.dsl import Output
 @dsl.component
 def flip_coin() -> str:
     import random
+    random.randint(0, 1)
     return 'heads' if random.randint(0, 1) == 0 else 'tails'
 
 

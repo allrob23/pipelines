@@ -24,6 +24,7 @@ from kfp.dsl import Output
 def output_metrics(metrics: Output[Metrics]):
     """Dummy component that outputs metrics with a random accuracy."""
     import random
+    random.seed(42)
     result = random.randint(0, 100)
     metrics.log_metric('accuracy', result)
 

@@ -21,6 +21,7 @@ import constants
 import kfp
 import kfp.dsl as dsl
 
+random.seed(42)
 
 @dsl.container_component
 def say_hello(name: str):

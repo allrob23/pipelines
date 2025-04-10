@@ -21,6 +21,7 @@ from kfp.dsl import component
 def flip_coin_op() -> str:
     """Flip a coin and output heads or tails randomly."""
     import random
+    random.seed(42)
     result = 'heads' if random.randint(0, 1) == 0 else 'tails'
     return result
 
